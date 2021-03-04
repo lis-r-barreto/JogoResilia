@@ -2,15 +2,31 @@ def jogar():
     imprimir_imagem_abertura()
     imprimir_mensagem_abertura()
 
+    personagem = int(input('\033[47;1;30m' + """Para começar o jogo, escolha seu personagem:
+
+                    [1] - Carmen Sandiego. Ela é uma ladra mestre e fundadora e líder da Villainous International League of Evil (codinome V.I.L.E.).
+
+                    [2] - Zack. Ele é agente da ACME, fala mais de 20 idiomas, é muito bom em ciências e engenharia e tem ótima memória fotográfica.
+
+                    [3] - Ivy. Ela é agente da ACME, é teimosa, determinada e muito atlética. Ela também é muito protetora com seu irmão mais novo, Zack.\n""" + '\033[0;0m'))
+
+    if (personagem == 1):
+        imprimir_sobre_carmen()
+    elif (personagem == 2):
+        imprimir_sobre_zack()
+    elif (personagem ==3):
+        imprimir_sobre_ivy()
+    else:
+        print("Escolha inválida! Tente novamente.")
     local = int(input('\033[47;1;30m' + """Onde devemos iniciar nossa busca? Digite o número correspondente:
             
-                        1 - [As Pirâmides]
+                        [1] - As Pirâmides de Gizé
             
             
-                        2 - [A Esfinge]
+                        [2] - A Esfinge
             
             
-                        3 - [O Templo]\n""" + '\033[0;0m'))
+                        [3] - O Templo de Abul Simbel\n""" + '\033[0;0m'))
 
     if (local == 1):
         mostrar_piramides()
@@ -20,9 +36,9 @@ def jogar():
                                 3 - Avô de Quéops
                                 4 - Quéops\n""" + '\033[0;0m'))
         if (enigma_1 == 1):
-            mostrar_fragmento_pergaminho()
+            mostrar_pergaminho()
         else:
-            print("Você perdeu!")
+            mostrar_derrota()
     elif (local == 2):
         mostrar_esfinge()
         enigma_2 = int(input('\033[46;1;30m' + """Há dois dias eu tinha 25 anos de idade, mas no ano que vem farei 28.Em que dia nasci?
@@ -31,9 +47,9 @@ def jogar():
                               3 - 1º de janeiro
                               4 - 29 de fevereiro\n""" + '\033[0;0m'))
         if (enigma_2 == 2):
-            mostrar_fragmento_pergaminho()
+            mostrar_pergaminho()
         else:
-            print("Você perdeu!")
+            mostrar_derrota()
     elif (local == 3):
         mostrar_templos()
         enigma_3 = int(input('\033[46;1;30m' + """Se 3 gatos matam 3 ratos em 3 minutos, quanto tempo levam 100 gatos para matar 100 ratos?
@@ -46,7 +62,7 @@ def jogar():
                                 1 - [Ramsés II]
                                 2 - [Nefertari]\n""" + '\033[0;0m'))
             if (templo == 1):
-                print("Você perdeu")
+                mostrar_derrota()
             elif (templo == 2):
                 enigma_4 = int(input('\033[46;1;30m' + """No templo de Nefertari haviam 4 relíquias. Entraram 2 ladrões e 
                 cada um levou uma relíquia. Quantas relíquias ficaram?
@@ -57,7 +73,7 @@ def jogar():
                 if (enigma_4 == 4):
                     mostrar_fragmento_pergaminho()
                 else:
-                    print("Você perdeu!")
+                    mostrar_derrota()
             else:
                 print("Local inválido! Tente novamente.")
     else:
@@ -65,15 +81,7 @@ def jogar():
 
 
 def imprimir_imagem_abertura():
-    print('\033[43;1;30m' + """
-   _____          _____                       _   _                                              ______           _   _           
-  / ____|        / ____|                     | | (_)                                            |  ____|         (_) | |          
- | |            | (___     __ _   _ __     __| |  _    ___    __ _    ___      _ __     ___     | |__      __ _   _  | |_    ___  
- | |             \___ \   / _` | | '_ \   / _` | | |  / _ \  / _` |  / _ \    | '_ \   / _ \    |  __|    / _` | | | | __|  / _ \ 
- | |____   _     ____) | | (_| | | | | | | (_| | | | |  __/ | (_| | | (_) |   | | | | | (_) |   | |____  | (_| | | | | |_  | (_) |
-  \_____| (_)   |_____/   \__,_| |_| |_|  \__,_| |_|  \___|  \__, |  \___/    |_| |_|  \___/    |______|  \__, | |_|  \__|  \___/ 
-                                                              __/ |                                        __/ |                  
-                                                             |___/                                        |___/                   
+    print('\033[43;1;30m' + """          
 
                    _
                    __ -
@@ -104,22 +112,61 @@ def imprimir_imagem_abertura():
                                                               .\n""" + '\033[0;0m')
 
 def imprimir_mensagem_abertura():
-    print(('\033[47;1;30m' + """
+    print(('\033[47;1;30m' + """            
+Nossa aventura no Egito Antigo acompanha os dois irmãos que são agentes da ACME, Zack e Ivy,
+em busca de Carmen Sandiego, uma antiga detetive da agência que, entediada com as missões, decide passar
+para o outro lado, fundando a V.I.L.E. e reunindo ladrões do mundo inteiro cujo objetivo é roubar itens
+raros e preciosos de diferentes países ao redor do globo. 
 
-            No Egito Antigo, a ladra super famosa Carmen Sandiego encontra-se novamente em uma missão quase impossível!
+Por meio de pistas deixadas por Carmen, Zack e Ivy tentam encontrá-la antes que ela possa concluir seus
+planos de roubar mais um artefato valioso, a Relíquia Antiga que pertencia à Rainha Ankhesenamon.\n""" + '\033[0;0m'))
 
-            Ela precisa encontrar os fragmentos do Papiro do Faraó Tutankhamun, para que seja possível desvendar 
-            a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun).
 
-            A primeira tarefa de Carmen foi bastante difícil. Com tantos locais para buscar os fragmentos ela teve 
-            que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde esses fragmentos 
-            estariam guardados.
+def imprimir_sobre_carmen():
+    print("""Você escolheu a personagem Carmen Sandiego!
+
+        No Egito Antigo, a ladra super famosa Carmen Sandiego encontra-se novamente em uma missão quase impossível!
+
+        Ela precisa encontrar os fragmentos do Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon.
+
+        A primeira tarefa de Carmen foi bastante difícil. Com tantos locais para buscar os fragmentos ela teve que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde esses fragmentos estariam guardados.
+
+        Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
+
+        Carmen sabe que os agentes Zack e Ivy a estão perseguindo e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!""")
+
+
+def imprimir_sobre_zack():
+    print("""Você escolheu o personagem Zack! 
+
+            No Egito Antigo, o agente Zack encontra-se novamente em uma missão quase impossível: localizar a ladra super famosa Carmen Sandiego.
+
+            Ele precisa encontrar o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun) e impedir que Carmen Sandiego a capture.
+
+            A primeira tarefa dos nossos agentes foi bastante difícil. Com tantos locais para buscar o papiro, eles tiveram que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde ele poderia estar guardado.
+
+            Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
+
+            Zack e Ivy sabem que perseguir a superladra Carmen Sandiego não é uma tarefa fácil e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!
+
+    """)
+
+
+def imprimir_sobre_ivy():
+    print("""Você escolheu a personagem Ivy! 
+
+            No Egito Antigo, a agente Ivy encontra-se novamente em uma missão quase impossível: localizar a ladra super famosa Carmen Sandiego.
             
-            Após uma grande busca, ficou acertado que os três possíveis locais seriam: 
-            As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
+            Ela precisa encontrar o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun) e impedir que Carmen Sandiego a capture.
+            
+            A primeira tarefa dos nossos agentes foi bastante difícil. Com tantos locais para buscar o papiro, eles tiveram que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde ele poderia estar guardado.
+            
+            Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
+            
+            Zack e Ivy sabem que perseguir a superladra Carmen Sandiego não é uma tarefa fácil e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!
 
-            Carmen sabe que os agentes Zack e Ivy a estão perseguindo e que qualquer passo em falso resultará
-            na perda da missão. Por isso, cada escolha deve ser muito bem pensada!\n""" + '\033[0;0m'))
+    """)
+
 
 def mostrar_esfinge():
     print('\033[43;1;30m' + """
@@ -186,9 +233,9 @@ def mostrar_templos():
      )))))))))    )(                             )(    (((((((((
      ))))))))))) (||)                           (||) (((((((((((\n""" + '\033[0;0m')
 
-def mostrar_fragmento_pergaminho():
+def mostrar_pergaminho():
 
- print('\033[45;1;30m' + """
+    print('\033[45;1;30m' + """
          .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--.
         / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \ 
         \ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/ / 
@@ -198,9 +245,9 @@ def mostrar_fragmento_pergaminho():
         \ \/\ \                                                    /\ \/ /
          \/ /\ \              Você venceu o jogo!!!                / /\/ /
          / /\/ /                                                   \ \/ /\ 
-        / /\ \/     O fragmento de pergaminho foi recuperado!!!    \ \/\ \ 
+        / /\ \/            O pergaminho foi encontrado!            \ \/\ \ 
         \ \/\ \                                                    /\ \/ /
-         \/ /\ \                       📜                         / /\/ /
+         \/ /\ \                                                  / /\/ /
          / /\/ /                                                  \ \/ /\ 
         / /\ \/                                                    \ \/\ \ 
         \ \/\ \.--..--..--..--..--..--..--..--..--..--..--..--..--./\ \/ /
@@ -209,5 +256,29 @@ def mostrar_fragmento_pergaminho():
         / /\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \ 
         \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
          `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\n""" + '\033[0;0m')
+
+def mostrar_derrota():
+    print('\033[45;1;30m' + """
+         .--..--..--..--..--..--..--..--..--..--..--..--..--..--..--..--.
+        / .. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \.. \ 
+        \ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/ / 
+         \/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /
+         / /\/ /`' /`' /`' /`' /`' /`' /`' /`' /`' /`' /`' /`' /`' /\/ /\ 
+        / /\ \/`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\ \/\ \ 
+        \ \/\ \                                                    /\ \/ /
+         \/ /\ \                Não foi dessa vez!!!                / /\/ /
+         / /\/ /                                                   \ \/ /\ 
+        / /\ \/                  Tente novamente!                  \ \/\ \ 
+        \ \/\ \                                                    /\ \/ /
+         \/ /\ \                                                  / /\/ /
+         / /\/ /                                                  \ \/ /\ 
+        / /\ \/                                                    \ \/\ \ 
+        \ \/\ \.--..--..--..--..--..--..--..--..--..--..--..--..--./\ \/ /
+         \/ /\/ ../ ../ ../ ../ ../ ../ ../ ../ ../ ../ ../ ../ ../ /\/ /
+         / /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\/ /\ 
+        / /\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \/\ \ 
+        \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
+         `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\n""" + '\033[0;0m')
+
 
 jogar()
