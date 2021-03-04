@@ -14,6 +14,6 @@ Nossa aventura no Egito Antigo acompanha os dois irmãos que são agentes da ACM
 
 ## Referências
 
-[Fandom: Carmen Sandiego](https://carmensandiego.fandom.com/wiki/Carmen_Sandiego)
-[Fandom: Ivy](https://carmensandiego.fandom.com/wiki/Ivy)
-[Fandom: Zack](https://carmensandiego.fandom.com/wiki/Zack)
+* [Fandom: Carmen Sandiego](https://carmensandiego.fandom.com/wiki/Carmen_Sandiego)
+* [Fandom: Ivy](https://carmensandiego.fandom.com/wiki/Ivy)
+* [Fandom: Zack](https://carmensandiego.fandom.com/wiki/Zack)
