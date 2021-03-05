@@ -4,11 +4,11 @@ def jogar():
 
     personagem = int(input('\033[47;1;30m' + """Para começar o jogo, escolha seu personagem:
 
-                    [1] - Carmen Sandiego. Ela é uma ladra mestre e fundadora e líder da Villainous International League of Evil (codinome V.I.L.E.).
+    [1] - Carmen Sandiego. Ela é uma ladra mestre e fundadora e líder da Villainous International League of Evil (codinome V.I.L.E.).
 
-                    [2] - Zack. Ele é agente da ACME, fala mais de 20 idiomas, é muito bom em ciências e engenharia e tem ótima memória fotográfica.
+    [2] - Zack. Ele é agente da ACME, fala mais de 20 idiomas, é muito bom em ciências e engenharia e tem ótima memória fotográfica.
 
-                    [3] - Ivy. Ela é agente da ACME, é teimosa, determinada e muito atlética. Ela também é muito protetora com seu irmão mais novo, Zack.\n""" + '\033[0;0m'))
+    [3] - Ivy. Ela é agente da ACME, é teimosa, determinada e muito atlética. Ela também é muito protetora com seu irmão mais novo, Zack.\n""" + '\033[0;0m'))
 
     if (personagem == 1):
         imprimir_sobre_carmen()
@@ -123,49 +123,46 @@ planos de roubar mais um artefato valioso, a Relíquia Antiga que pertencia à R
 
 
 def imprimir_sobre_carmen():
-    print("""Você escolheu a personagem Carmen Sandiego!
+    print('\033[43;1;30m' + """Você escolheu a personagem Carmen Sandiego!
 
-        No Egito Antigo, a ladra super famosa Carmen Sandiego encontra-se novamente em uma missão quase impossível!
-
-        Ela precisa encontrar os fragmentos do Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon.
-
-        A primeira tarefa de Carmen foi bastante difícil. Com tantos locais para buscar os fragmentos ela teve que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde esses fragmentos estariam guardados.
-
-        Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
-
-        Carmen sabe que os agentes Zack e Ivy a estão perseguindo e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!""")
+No Egito Antigo, a ladra super famosa Carmen Sandiego encontra-se novamente em uma missão quase impossível!
+Ela precisa encontrar o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da 
+Relíquia Antiga que pertencia à Rainha Ankhesenamon. A primeira tarefa de Carmen foi bastante difícil.
+Com tantos locais para buscar o papiro, ela teve que traçar estratégias e buscar informações históricas
+que indicassem possíveis locais onde ele poderia estar guardado. Após uma grande busca, ficou acertado que
+os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel. 
+Carmen sabe que os agentes Zack e Ivy a estão perseguindo e que qualquer passo em falso resultará na perda da missão.
+Por isso, cada escolha deve ser muito bem pensada!\n""" + '\033[0;0m')
 
 
 def imprimir_sobre_zack():
-    print("""Você escolheu o personagem Zack! 
-
-            No Egito Antigo, o agente Zack encontra-se novamente em uma missão quase impossível: localizar a ladra super famosa Carmen Sandiego.
-
-            Ele precisa encontrar o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun) e impedir que Carmen Sandiego a capture.
-
-            A primeira tarefa dos nossos agentes foi bastante difícil. Com tantos locais para buscar o papiro, eles tiveram que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde ele poderia estar guardado.
-
-            Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
-
-            Zack e Ivy sabem que perseguir a superladra Carmen Sandiego não é uma tarefa fácil e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!
-
-    """)
+    print('\033[43;1;30m' + """Você escolheu o personagem Zack!
+    
+No Egito Antigo, o agente Zack encontra-se novamente em uma missão quase impossível: 
+localizar a ladra super famosa Carmen Sandiego. Ele precisa encontrar o Papiro do Faraó Tutankhamun, 
+para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon 
+(esposa de Tutankhamun) e impedir que Carmen Sandiego a capture. A primeira tarefa dos nossos agentes 
+foi bastante difícil. Com tantos locais para buscar o papiro, eles tiveram que traçar estratégias e 
+buscar informações históricas que indicassem possíveis locais onde ele poderia estar guardado. Após 
+uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge
+de Gizé e O Templo de Abu Simbel. Zack e Ivy sabem que perseguir a superladra Carmen Sandiego não é uma
+tarefa fácil e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve 
+ser muito bem pensada!\n""" + '\033[0;0m')
 
 
 def imprimir_sobre_ivy():
-    print("""Você escolheu a personagem Ivy! 
+    print('\033[43;1;30m' + """Você escolheu a personagem Ivy! 
 
-            No Egito Antigo, a agente Ivy encontra-se novamente em uma missão quase impossível: localizar a ladra super famosa Carmen Sandiego.
-            
-            Ela precisa encontrar o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun) e impedir que Carmen Sandiego a capture.
-            
-            A primeira tarefa dos nossos agentes foi bastante difícil. Com tantos locais para buscar o papiro, eles tiveram que traçar estratégias e buscar informações históricas que indicassem possíveis locais onde ele poderia estar guardado.
-            
-            Após uma grande busca, ficou acertado que os três possíveis locais seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel.
-            
-            Zack e Ivy sabem que perseguir a superladra Carmen Sandiego não é uma tarefa fácil e que qualquer passo em falso resultará na perda da missão. Por isso, cada escolha deve ser muito bem pensada!
-
-    """)
+No Egito Antigo, a agente Ivy encontra-se novamente em uma missão quase
+impossível: localizar a ladra super famosa Carmen Sandiego. Ela precisa encontrar
+o Papiro do Faraó Tutankhamun, para que seja possível desvendar a localização da Relíquia
+Antiga que pertencia à Rainha Ankhesenamon (esposa de Tutankhamun) e impedir que Carmen Sandiego
+a capture. A primeira tarefa dos nossos agentes foi bastante difícil. Com tantos locais para buscar
+o papiro, eles tiveram que traçar estratégias e buscar informações históricas que indicassem possíveis
+locais onde ele poderia estar guardado. Após uma grande busca, ficou acertado que os três possíveis locais
+seriam: As Pirâmides de Gizé, A Esfinge de Gizé e O Templo de Abu Simbel. Zack e Ivy sabem que perseguir a 
+superladra Carmen Sandiego não é uma tarefa fácil e que qualquer passo em falso resultará na perda da missão.
+Por isso, cada escolha deve ser muito bem pensada!\n""" + '\033[0;0m')
 
 
 def mostrar_esfinge():
@@ -280,5 +277,14 @@ def mostrar_derrota():
         \ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `'\ `' /
          `--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'`--'\n""" + '\033[0;0m')
 
-
 jogar()
+
+
+nova_rodada = int(input('\033[45;1;30m' + """Deseja jogar novamente?
+    [1] - Sim
+    [2] - Não\n""" + '\033[0;0m'))
+
+if (nova_rodada == 1):
+    jogar()
+else:
+    print('\033[45;1;30m' + "Espero te ver em breve! Até mais!" + '\033[0;0m')
