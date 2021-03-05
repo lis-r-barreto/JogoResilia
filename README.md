@@ -10,7 +10,7 @@ Utilizar os conceitos de Programação Imperativa aprendidos durante o Vamo AI p
 
 ## Descrição
 
-Nossa aventura no Egito Antigo acompanha os dois irmãos que são agentes da ACME, Zack e Ivy, em busca de Carmen Sandiego, uma antiga detetive da agência que, entediada com as missões, decide passar para o outro lado, fundando a V.I.L.E. e reunindo ladrões do mundo inteiro cujo objetivo é roubar itens raros e preciosos de diferentes países ao redor do globo. Por meio de pistas deixadas por Carmen, Zack e Ivy tentam encontrá-la antes que ela possa concluir seus planos de roubar mais um artefato valioso, a Relíquia Antiga que pertencia à Rainha Ankhesenamon.
+Nossa aventura no Egito Antigo acompanha os dois irmãos que são agentes da ACME, Zack e Ivy, em busca de Carmen Sandiego, uma antiga detetive da agência que, entediada com as missões, decide passar para o outro lado, fundando a V.I.L.E. e reunindo ladrões do mundo inteiro cujo objetivo é roubar itens raros e preciosos de diferentes países ao redor do mundo. Por meio de pistas deixadas por Carmen, Zack e Ivy tentam encontrá-la antes que ela possa concluir seus planos de roubar mais um artefato valioso, a Relíquia Antiga que pertencia à Rainha Ankhesenamon.
 
 ## Referências
 
