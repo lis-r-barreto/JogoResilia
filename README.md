@@ -1,4 +1,4 @@
-# Carmen Sandiego: Em Busca da Relíquia de Ankhesenamon
+# Carmen Sandiego: Em Busca da Relíquia de Ankhesenamon :mag_right:
 
 <p align="center">
   <img src="https://github.com/lis-r-barreto/JogoResilia/blob/main/carmen_sandiego.jpg" height = 300>
